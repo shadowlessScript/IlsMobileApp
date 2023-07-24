@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Profile">
+
+    <ImageView
+        android:id="@+id/ProfilePic"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        tools:src="@tools:sample/avatars[10]" />
+    <TextView
+        android:id="@+id/fullNameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full Name"
+        android:layout_below="@id/ProfilePic"
+        android:layout_marginTop="20sp"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/emailTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/emailreg"
+        android:layout_below="@id/fullNameTxt"
+        android:layout_margin="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="full.name@org.com"
+        android:layout_toRightOf="@id/emailTxt"
+        android:layout_below="@id/fullNameTxt"
+        android:layout_margin="20dp"/>
+
+</RelativeLayout>

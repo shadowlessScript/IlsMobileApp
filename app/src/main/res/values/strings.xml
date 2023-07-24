@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">ILS</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="logintxt">Login</string>
+    <string name="loginPageRegLinkTxt">Not a member ?</string>
+    <string name="forgotPasswordLinkTxt">Forgot Password ?</string>
+    <string name="appviewtitle">Testing</string>
+    <string name="emailreg">Email</string>
+    <string name="hConfirmPass">Confirm Password</string>
+    <string name="regbtntxt">Register</string>
+    <string name="forYou">For you</string>
+    <string name="Profile">Profile</string>
+    <string name="activities">Activities</string>
+    <string name="home">Home</string>
+    <string name="searchBarHint">Search for a book</string>
+    <string name="reco_txt">Recommended books</string>
+    <string name="popularBooks">Other Popular Books</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lorem">Lorem ipsum dolor sit amet. Est ipsum reiciendis non dolores minima sed iusto sint non assumenda corporis est dolorem rerum? Sit praesentium distinctio et enim iste At iste eaque non aperiam expedita.
+
+        Et ipsam debitis At omnis quasi ut iure voluptatibus sed aperiam nulla aut velit porro et odio iure et dignissimos molestiae. 33 vitae beatae et quis sequi qui reprehenderit repudiandae ut optio sequi.
+
+        Hic accusantium nobis est voluptas temporibus ab consequuntur molestiae non sint voluptas. Eos perferendis vero et voluptatem velit eos fuga consectetur qui fuga velit eos inventore ratione qui iure modi.</string>
+</resources>
