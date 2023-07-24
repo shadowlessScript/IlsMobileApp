@@ -44,13 +44,10 @@ public class booksRepoAdapter extends RecyclerView.Adapter<booksRepoAdapter.View
             @Override
             public void onClick(View view) {
                 Toast.makeText(context, books.get(holder.getAdapterPosition()).getSerialNumber() + " selected", Toast.LENGTH_SHORT).show();
-//                AppView appView = new AppView();
-//                appView.replaceFragment(new BookInfo());
 
-                FragmentManager fragmentManager = ((FragmentActivity)context).getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_container_view, new BookInfo());
-                fragmentTransaction.commit();
+                Helpers helper = new Helpers();
+                helper.replaceFragment(context, new BookInfo());
+
             }
         });
 

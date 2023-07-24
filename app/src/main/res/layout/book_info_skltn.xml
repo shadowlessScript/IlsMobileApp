@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_width="150dp"
+        android:id="@+id/bookInfoImgCover"
+        android:layout_marginTop="20dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/purple_500"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/bookInfoAuthorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Author's Name"
+        android:layout_below="@id/bookInfoImgCover"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bookInfoAuthorName"
+        android:id="@+id/bookInfoISBN"
+        android:text="ISBN: "
+        android:layout_marginStart="134sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/bookInfoISBN"
+        android:text="1239 9129 304 283"
+        android:layout_below="@id/bookInfoAuthorName"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bookInfoISBN"
+        android:id="@+id/bookInfoCallNo"
+        android:text="Call Number: "
+        android:layout_marginStart="134sp"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/bookInfoCallNo"
+        android:text="CR 34 12 399"
+        android:layout_below="@id/bookInfoISBN"/>
+    <TextView
+        android:id="@+id/bookInfoRating"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rating"
+        android:layout_below="@id/bookInfoCallNo"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/bookInfoDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:layout_below="@id/bookInfoRating"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lorem"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/bookInfoDescription"
+        android:textAlignment="center"/>
+
+
+</RelativeLayout>

@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.ClipData;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.FrameMetrics;
 import android.view.MenuItem;
@@ -27,7 +28,7 @@ import java.util.ArrayList;
 
 public class AppView extends AppCompatActivity {
 
-
+    private Context AppCxt = AppView.this;
 
     private BottomNavigationView bottomNavigationView;
 
@@ -36,6 +37,7 @@ public class AppView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_app_view);
 
+        Helpers helper = new Helpers();
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 
@@ -43,29 +45,23 @@ public class AppView extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
-                switch (id){
+                switch (id) {
                     case (R.id.item_1):
-                        replaceFragment(new Home());
+                        helper.replaceFragment(AppCxt, new Home());
+//                        replaceFragment(new Home());
                         break;
                     case (R.id.item_2):
-                        replaceFragment(new ForYou());
+                        helper.replaceFragment(AppCxt, new ForYou());
                         break;
                     case (R.id.item_3):
-                        replaceFragment(new Activities());
+                        helper.replaceFragment(AppCxt, new Activities());
                         break;
                     case (R.id.item_4):
-                        replaceFragment(new Profile());
+                        helper.replaceFragment(AppCxt, new Profile());
                 }
-                return  true;
+                return true;
             }
         });
 
-    }
-
-    public void replaceFragment(Fragment fragment) {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_container_view, fragment);
-        fragmentTransaction.commit();
     }
 }
