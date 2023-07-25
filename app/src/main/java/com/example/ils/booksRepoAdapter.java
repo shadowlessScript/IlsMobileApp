@@ -24,6 +24,7 @@ import java.util.ArrayList;
 
 public class booksRepoAdapter extends RecyclerView.Adapter<booksRepoAdapter.ViewHolder> {
     private ArrayList<books> books = new ArrayList<>();
+    public static String SERIAL_NUMBER;
     private Context context;
     public booksRepoAdapter(Context context){
         this.context = context;
@@ -44,7 +45,7 @@ public class booksRepoAdapter extends RecyclerView.Adapter<booksRepoAdapter.View
             @Override
             public void onClick(View view) {
                 Toast.makeText(context, books.get(holder.getAdapterPosition()).getSerialNumber() + " selected", Toast.LENGTH_SHORT).show();
-
+                SERIAL_NUMBER = books.get(holder.getAdapterPosition()).getSerialNumber();
                 Helpers helper = new Helpers();
                 helper.replaceFragment(context, new BookInfo());
 

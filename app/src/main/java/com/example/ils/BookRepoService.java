@@ -15,7 +15,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 public class BookRepoService {
-    public final static String HOST_URL_IP = "http://192.168.1.13:8000";
+    public final static String HOST_URL_IP = "http://192.168.1.11:8000";
     public final static String BOOK_REPO_URL = HOST_URL_IP+"/api/booksrepo/";
     Context context;
     private String bookTitle;
