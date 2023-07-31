@@ -1,8 +1,5 @@
 package com.example.ils.fragments;
 
-import static android.content.Context.LAYOUT_INFLATER_SERVICE;
-import static androidx.core.content.ContextCompat.getSystemService;
-
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -12,29 +9,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-import com.example.ils.BookRepoService;
-import com.example.ils.MySingleton;
+import com.example.ils.ApiServices.BookRepoService;
 import com.example.ils.R;
-import com.example.ils.books;
-import com.example.ils.booksRepoAdapter;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.example.ils.Adpaters.booksRepoAdapter;
+import com.example.ils.models.books;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 
 public class Home extends Fragment {
@@ -59,7 +41,7 @@ public class Home extends Fragment {
             }
 
             @Override
-            public void onResponse(ArrayList<com.example.ils.books> books) {
+            public void onResponse(ArrayList<books> books) {
                 adapter.setBooks(books);
 
             }

@@ -1,4 +1,4 @@
-package com.example.ils;
+package com.example.ils.ApiServices;
 
 import android.content.Context;
 import android.widget.Toast;
@@ -7,6 +7,8 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.example.ils.MySingleton;
+import com.example.ils.models.books;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -25,7 +27,7 @@ public class BookRepoService {
     private JSONObject bookInfo;
     private String bookState;
 
-    ArrayList<books> books = new ArrayList<>();
+    ArrayList<com.example.ils.models.books> books = new ArrayList<>();
     public BookRepoService(Context context){
         this.context = context;
     }

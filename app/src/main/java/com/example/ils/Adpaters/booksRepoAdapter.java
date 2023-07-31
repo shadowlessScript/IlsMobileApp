@@ -1,29 +1,27 @@
-package com.example.ils;
+package com.example.ils.Adpaters;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
-import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.ils.Helpers;
+import com.example.ils.R;
+import com.example.ils.models.books;
 import com.example.ils.fragments.BookInfo;
 
 import java.util.ArrayList;
 
 public class booksRepoAdapter extends RecyclerView.Adapter<booksRepoAdapter.ViewHolder> {
-    private ArrayList<books> books = new ArrayList<>();
+    private ArrayList<com.example.ils.models.books> books = new ArrayList<>();
     public static String SERIAL_NUMBER;
     private Context context;
     public booksRepoAdapter(Context context){
@@ -80,5 +78,7 @@ public class booksRepoAdapter extends RecyclerView.Adapter<booksRepoAdapter.View
         }
     }
 
-
+    public ArrayList<com.example.ils.models.books> getBooks() {
+        return books;
+    }
 }

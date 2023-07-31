@@ -2,6 +2,7 @@ package com.example.ils;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -15,11 +16,15 @@ import android.os.Bundle;
 import android.view.FrameMetrics;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
+import com.example.ils.Adpaters.booksRepoAdapter;
+import com.example.ils.ApiServices.BookRepoService;
 import com.example.ils.fragments.Activities;
 import com.example.ils.fragments.ForYou;
 import com.example.ils.fragments.Home;
 import com.example.ils.fragments.Profile;
+import com.example.ils.models.books;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.navigation.NavigationBarView;
@@ -31,6 +36,7 @@ public class AppView extends AppCompatActivity {
     private Context AppCxt = AppView.this;
 
     private BottomNavigationView bottomNavigationView;
+    private SearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +46,22 @@ public class AppView extends AppCompatActivity {
         Helpers helper = new Helpers();
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
+        searchView = findViewById(R.id.searchBar);
+        searchView.clearFocus(); // remove cursor from the search view
 
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+
+                return true;
+            }
+        });
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {

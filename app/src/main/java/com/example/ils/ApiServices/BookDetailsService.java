@@ -1,8 +1,7 @@
-package com.example.ils;
+package com.example.ils.ApiServices;
 
-import static com.example.ils.BookRepoService.BOOK_REPO_URL;
-import static com.example.ils.BookRepoService.HOST_URL_IP;
-import static com.example.ils.booksRepoAdapter.SERIAL_NUMBER;
+import static com.example.ils.ApiServices.BookRepoService.HOST_URL_IP;
+import static com.example.ils.Adpaters.booksRepoAdapter.SERIAL_NUMBER;
 
 import android.content.Context;
 import android.widget.Toast;
@@ -11,6 +10,8 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.example.ils.models.BookDetails;
+import com.example.ils.MySingleton;
 
 import org.json.JSONArray;
 import org.json.JSONException;

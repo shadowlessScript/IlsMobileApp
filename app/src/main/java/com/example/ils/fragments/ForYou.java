@@ -5,16 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ils.R;
-import com.example.ils.books;
-import com.example.ils.booksRepoAdapter;
+import com.example.ils.models.books;
+import com.example.ils.Adpaters.booksRepoAdapter;
 
 import java.util.ArrayList;
 

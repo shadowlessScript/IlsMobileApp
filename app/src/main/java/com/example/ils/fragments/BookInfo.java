@@ -9,14 +9,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.example.ils.BookDetails;
-import com.example.ils.BookDetailsService;
-import com.example.ils.BookInfoAdapter;
-import com.example.ils.BookRepoService;
+import com.example.ils.ApiServices.BookDetailsService;
+import com.example.ils.Adpaters.BookInfoAdapter;
 import com.example.ils.R;
+import com.example.ils.models.BookDetails;
 
 import java.util.ArrayList;
 
@@ -58,7 +56,7 @@ public class BookInfo extends Fragment {
             }
 
             @Override
-            public void onResponse(ArrayList<com.example.ils.BookDetails> bookDetails) {
+            public void onResponse(ArrayList<BookDetails> bookDetails) {
                 bookInfoAdapter.setBooksInfo(bookDetails);
 
             }

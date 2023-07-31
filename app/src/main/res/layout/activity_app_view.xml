@@ -8,12 +8,23 @@
     android:id="@+id/MainContainer"
     >
 
+    <androidx.appcompat.widget.SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_bar_bg"
+        android:id="@+id/searchBar"
+        app:queryHint="Search here..."
+        app:iconifiedByDefault="false"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"/>
+
     <androidx.fragment.app.FragmentContainerView
         android:layout_above="@id/bottomNavBar"
         android:id="@+id/fragment_container_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:name="com.example.ils.fragments.Home"
+        android:layout_below="@id/searchBar"
         />
     <include
         android:id="@+id/bottomNavBar"

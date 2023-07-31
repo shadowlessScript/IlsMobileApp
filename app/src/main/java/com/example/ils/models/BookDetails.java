@@ -1,6 +1,8 @@
-package com.example.ils;
+package com.example.ils.models;
 
-public class BookDetails extends books{
+import com.example.ils.models.books;
+
+public class BookDetails extends books {
 
     private String CoAuthor;
     private String Pages;
